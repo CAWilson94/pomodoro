@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-timer',
@@ -6,23 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./timer.component.scss']
 })
 export class TimerComponent {
+  @Input() minute!: number; 
   display: any;
   public timerInterval: any;
 
   start() {
-    this.timer(25);
+    this.timer();
   }
   stop() {
     clearInterval(this.timerInterval);
   }
 
-  timer(minute:any) {
+  timer() {
     // let minute = 1;
-    let seconds: number = minute * 60;
+    let seconds: number = this.minute * 60;
     let textSec: any = '0';
     let statSec: number = 60;
 
-    const prefix = minute < 10 ? '0' : '';
+    const prefix = this.minute < 10 ? '0' : '';
 
     this.timerInterval = setInterval(() => {
       seconds--;
