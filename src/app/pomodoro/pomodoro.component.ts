@@ -9,7 +9,7 @@ export class PomodoroComponent {
 
   timer: string = "not started yet";
 
-  toggleTimer(){ 
+  toggleTimer() {
     console.log("Hello");
     this.startCountdown(1000);
   }

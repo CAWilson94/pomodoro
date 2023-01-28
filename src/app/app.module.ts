@@ -6,11 +6,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PomodoroComponent } from './pomodoro/pomodoro.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TimerComponent } from './timer/timer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PomodoroComponent
+    PomodoroComponent,
+    TimerComponent
   ],
   imports: [
     BrowserModule,
