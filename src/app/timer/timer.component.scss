@@ -1,0 +1,21 @@
+.button-group {
+    display: flex;
+    align-content: space-around;
+    min-width: fit-content;
+    width: auto;
+}
+
+.display {
+    display: flex;
+    align-items: center;
+    align-self: center;
+    width: fit-content;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap-reverse;
+}
