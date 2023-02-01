@@ -5,8 +5,13 @@
             <mat-card-title>Pomodoro Timer</mat-card-title>
             <mat-card-subtitle>Get some work done!</mat-card-subtitle>
         </mat-card-header>
+        <mat-card-actions class="action-buttons">
+            <button mat-button color="accent" (click)="pomodoro()">Pomodoro</button>
+            <button mat-button color="accent" (click)="shortBreak()">Short Break</button>
+            <button mat-button color="accent" (click)="longBreak()">Long Break</button>
+        </mat-card-actions>
         <mat-card-content class="display">
-            <h2>{{display}}</h2>
+            <h1 class="mat-headline">{{display}}</h1>
         </mat-card-content>
         <div class="container">
             <mat-card-actions>

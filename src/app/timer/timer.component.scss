@@ -10,29 +10,28 @@
     align-items: center;
     align-self: center;
     width: fit-content;
-    min-height: 32px;
+    min-height: 102px;
     padding: 30px;
 }
 
+.action-buttons{
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+}
 
 .container {
     display: flex;
     flex-direction: column;
     align-content: center;
     flex-wrap: wrap-reverse;
-    min-width: 400px;
+    min-width: 800px;
 }
 
 .outer-container {
     display: flex;
     justify-content: center;
-
-    padding-top: 100px;
-}
-
-
-.tomato-card {
-    max-width: 400px;
+    padding-top: 350px;
 }
 
 .tomato-image {
