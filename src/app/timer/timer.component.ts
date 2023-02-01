@@ -1,4 +1,5 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
+import { async } from '@angular/core/testing';
 
 @Component({
   selector: 'app-timer',
@@ -6,28 +7,30 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./timer.component.scss']
 })
 export class TimerComponent {
-  pomodoro() {
-    alert("POMODORO");
-  }
-  longBreak() {
-    alert("LONG BREAK");
-  }
-  shortBreak() {
-    alert("SHORT BREAK");
-  }
-  @Input() minute!: number;
+
+  
+  minute: number = 25; // default to full pomodoro
+  rounds: number = 0;
   display: any;
+
+  newTimer(minute: number) {
+    this.stop();
+    this.minute = minute;
+    this.start();
+  }
+
   public timerInterval: any;
 
   start() {
+    this.stop();
     this.timer();
   }
+
   stop() {
     clearInterval(this.timerInterval);
   }
 
   timer() {
-    // let minute = 1;
     let seconds: number = this.minute * 60;
     let textSec: any = '0';
     let statSec: number = 60;
@@ -46,8 +49,8 @@ export class TimerComponent {
       this.display = `${prefix}${Math.floor(seconds / 60)}:${textSec}`;
 
       if (seconds == 0) {
-        console.log('finished');
-        clearInterval(this.timerInterval);
+        console.log('finished, number of rounds - ' + this.rounds);
+        this.stop();
       }
     }, 1000);
   }
