@@ -6,7 +6,16 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./timer.component.scss']
 })
 export class TimerComponent {
-  @Input() minute!: number; 
+  pomodoro() {
+    alert("POMODORO");
+  }
+  longBreak() {
+    alert("LONG BREAK");
+  }
+  shortBreak() {
+    alert("SHORT BREAK");
+  }
+  @Input() minute!: number;
   display: any;
   public timerInterval: any;
 
