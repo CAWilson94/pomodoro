@@ -1,9 +1,18 @@
-<div class="container">
-    <div class="button-group">
-        <button mat-raised-button color="primary" (click)="start()">Start</button>
-        <button mat-raised-button color="accent" (click)="stop()">Stop</button>
-    </div>
-    <div class="display">
-        {{display}}
-    </div>
+<div class="outer-container">
+    <mat-card class="tomato-card">
+        <mat-card-header>
+            <div mat-card-avatar class="tomato-image"></div>
+            <mat-card-title>Pomodoro Timer</mat-card-title>
+            <mat-card-subtitle>Get some work done!</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content class="display">
+            <h2>{{display}}</h2>
+        </mat-card-content>
+        <div class="container">
+            <div class="button-group">
+                <button mat-raised-button color="primary" (click)="start()">Start</button>
+                <button mat-raised-button color="accent" (click)="stop()">Stop</button>
+            </div>
+        </div>
+    </mat-card>
 </div>
